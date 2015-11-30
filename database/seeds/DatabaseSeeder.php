@@ -14,8 +14,29 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call('UserTableSeeder');
+        $this->call('DefaultPopulator');
 
         Model::reguard();
     }
+}
+
+/**
+ * Class DefaultPopulator
+ */
+class DefaultPopulator extends Seeder
+{
+    public function run()
+    {
+        $ApiSubscriber = App\Models\ApiSubscriber::create(
+            [
+                'email' => 'test@user.dev',
+                'password' => 'secret',
+            ]
+        );
+
+        unset($ApiSubscriber);
+        return;
+    }
+
+
 }
