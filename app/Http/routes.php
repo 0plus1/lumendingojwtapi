@@ -11,6 +11,14 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->welcome();
+$api = app('Dingo\Api\Routing\Router');
+
+// JWT Protected routes
+$api->version('v1', ['middleware' => 'api.auth', 'providers' => 'jwt'], function ($api) {
+    $api->get('/index', 'App\Http\Controllers\BackendController@index');
+});
+
+// Publicly accessible routes
+$api->version('v1', [], function ($api) {
+    $api->post('/authenticate', 'App\Http\Controllers\AuthenticateController@backend');
 });
