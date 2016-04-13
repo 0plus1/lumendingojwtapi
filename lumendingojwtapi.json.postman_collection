@@ -1,0 +1,67 @@
+{
+	"id": "97176123-789b-4f53-e8d8-32a24dab2f68",
+	"name": "lumendingojwtapi",
+	"description": "",
+	"order": [
+		"bfb5fdeb-91b7-ec7d-f3cc-cab767b4ff1d",
+		"ea4b5d15-fd7b-a675-ca02-86a7bd55bd91"
+	],
+	"folders": [],
+	"timestamp": 1448877693431,
+	"owner": "37016",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "bfb5fdeb-91b7-ec7d-f3cc-cab767b4ff1d",
+			"headers": "",
+			"url": "lumendingojwtapi.local/authenticate",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "email",
+					"value": "test@user.dev",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "secret",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1448878089915,
+			"name": "login",
+			"description": "",
+			"collectionId": "97176123-789b-4f53-e8d8-32a24dab2f68",
+			"responses": []
+		},
+		{
+			"id": "ea4b5d15-fd7b-a675-ca02-86a7bd55bd91",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbHVtZW5kaW5nb2p3dGFwaS5sb2NhbC9hdXRoZW50aWNhdGUiLCJpYXQiOjE0NDg4NzgxNTEsImV4cCI6MTQ0ODg4MTc1MSwibmJmIjoxNDQ4ODc4MTUxLCJqdGkiOiIyMzUzZmMyMmE3ZWE1OTExMjQwZjg4YTJjNjdmOTU0OSIsInN1YiI6MX0.BrMTtG_NflVmIbQDTQNy1zV_AIyyO8IMngFBuq4MRm8\n",
+			"url": "lumendingojwtapi.local/index",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1448878180565,
+			"name": "index",
+			"description": "",
+			"collectionId": "97176123-789b-4f53-e8d8-32a24dab2f68",
+			"responses": []
+		}
+	]
+}
