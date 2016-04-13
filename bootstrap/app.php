@@ -59,13 +59,14 @@ $app->singleton(
 |
 */
 
-// $app->middleware([
+ $app->middleware([
 //     // Illuminate\Cookie\Middleware\EncryptCookies::class,
 //     // Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
 //     // Illuminate\Session\Middleware\StartSession::class,
 //     // Illuminate\View\Middleware\ShareErrorsFromSession::class,
 //     // Laravel\Lumen\Http\Middleware\VerifyCsrfToken::class,
-// ]);
+     'Barryvdh\Cors\HandleCors'
+ ]);
 
 // $app->routeMiddleware([
 
@@ -92,6 +93,7 @@ app('Dingo\Api\Auth\Auth')->extend('jwt', function ($app) {
     return new Dingo\Api\Auth\Provider\JWT($app['Tymon\JWTAuth\JWTAuth']);
 });
 
+$app->register(Barryvdh\Cors\LumenServiceProvider::class);
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes

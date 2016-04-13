@@ -8,8 +8,9 @@
         "php": ">=5.5.9",
         "laravel/lumen-framework": "5.1.*",
         "vlucas/phpdotenv": "~1.0",
-        "dingo/api": "1.0.x@dev",
-        "tymon/jwt-auth": "0.6.*@dev"
+        "dingo/api": "dev-master#cde3390",
+        "tymon/jwt-auth": "0.6.*@dev",
+        "barryvdh/laravel-cors": "^0.8.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.0",

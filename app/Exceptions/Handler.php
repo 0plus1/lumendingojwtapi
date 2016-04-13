@@ -39,6 +39,11 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        return parent::render($request, $e);
+        $response = parent::render($request, $e);
+        // if ($request->is('api/*')) { // Add this if you want to filter specific requests
+        // We force cors headers on exception errors as well, dingo/api uses exceptions everywhere
+        app('Barryvdh\Cors\Stack\CorsService')->addActualRequestHeaders($response, $request);
+
+        return $response;
     }
 }
