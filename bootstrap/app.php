@@ -70,7 +70,8 @@ $app->singleton(
 //     // Illuminate\Session\Middleware\StartSession::class,
 //     // Illuminate\View\Middleware\ShareErrorsFromSession::class,
 //     // Laravel\Lumen\Http\Middleware\VerifyCsrfToken::class,
-     'Barryvdh\Cors\HandleCors'
+     Barryvdh\Cors\HandleCors::class,
+     Barryvdh\Cors\HandlePreflightSimple::class
  ]);
 
 // $app->routeMiddleware([
