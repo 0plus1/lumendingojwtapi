@@ -30,6 +30,7 @@ $app->withEloquent();
 // Register config files
 $app->configure('auth');
 $app->configure('jwt');
+$app->configure('cors');
 
 /*
 |--------------------------------------------------------------------------
