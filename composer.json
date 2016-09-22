@@ -6,11 +6,11 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/lumen-framework": "5.2.*",
+        "laravel/lumen-framework": "5.3.*",
         "vlucas/phpdotenv": "~2.2",
-        "dingo/api": "dev-master",
-        "tymon/jwt-auth": "dev-master#dfd929d",
-        "barryvdh/laravel-cors": "^0.8.0"
+        "dingo/api": "1.0.*@dev",
+        "tymon/jwt-auth": "dev-master#c153d85",
+        "barryvdh/laravel-cors": "0.8.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
